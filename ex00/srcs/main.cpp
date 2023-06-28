@@ -11,8 +11,14 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include "ClapTrap.class.hpp"
+
 
 int main(void) {
-	// TODO
+	ClapTrap bulbizar("Bulbizar");
+	ClapTrap salameche("Salamèche");
+	ClapTrap carapuce("Carapuce");
+
+	bulbizar.attack("Salamèche");
 	return 0;
 }

@@ -1,0 +1,18 @@
+/.idea
+**/.DS_Store
+
+# EX00
+/ex00/objs/*.o
+/ex00/claptrap
+
+# EX01
+/ex01/objs/*.o
+/ex00/scavtrap
+
+# EX02
+/ex02/objs/*.o
+/ex02/fragtrap
+
+# EX03
+/ex03/objs/*.o
+/ex03/diamondtrap

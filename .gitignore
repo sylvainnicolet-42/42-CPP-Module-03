@@ -7,7 +7,7 @@
 
 # EX01
 /ex01/objs/*.o
-/ex00/scavtrap
+/ex01/scavtrap
 
 # EX02
 /ex02/objs/*.o

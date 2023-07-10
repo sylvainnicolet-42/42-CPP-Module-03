@@ -20,13 +20,13 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints
 	std::cout << "ClapTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
-ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap " << this->_name << " is destroyed! 💀" << std::endl;
-}
-
 ClapTrap::ClapTrap(const ClapTrap &clapTrap) {
 	std::cout << "ClapTrap " << clapTrap._name << " is copied! 🐑" << std::endl;
 	*this = clapTrap;
+}
+
+ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap " << this->_name << " is destroyed! 💀" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target) {
@@ -66,7 +66,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
-	std::cout << "Assignation operator called from " << rhs._name << std::endl;
+	std::cout << "ClapTrap assignation operator called from " << rhs._name << std::endl;
 	this->_name = rhs._name;
 	this->_hitPoints = rhs._hitPoints;
 	this->_energyPoints = rhs._energyPoints;

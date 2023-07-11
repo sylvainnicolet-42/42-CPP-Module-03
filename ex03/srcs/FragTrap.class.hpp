@@ -26,7 +26,10 @@ class FragTrap : virtual public ClapTrap {
 		FragTrap(std::string name);
 
 		void	highFivesGuys();
-	private:
+	protected:
+		const static int	_hitPointsConst = 100;
+		const static int	_energyPointsConst = 100;
+		const static int	_attackDamageConst = 30;
 };
 
 #endif

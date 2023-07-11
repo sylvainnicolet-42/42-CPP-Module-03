@@ -14,22 +14,27 @@
 
 DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap() {
 	this->_name = "Pikachu";
-	this->_hitPoints = FragTrap::_hitPoints; // 100
-	this->_energyPoints = ScavTrap::_energyPoints; // 50
-	this->_attackDamage = FragTrap::_attackDamage; // 30
+	ClapTrap::_name = this->_name + "_clap_name";
+	this->_hitPoints = FragTrap::_hitPointsConst; // 100
+	this->_energyPoints = ScavTrap::_energyPointsConst; // 50
+	this->_attackDamage = FragTrap::_attackDamageConst;// 30
 	std::cout << "Default DiamondTrap " << this->_name << " is born! 🐣" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " is born! 🐣" << std::endl;
+	std::cout << "hitPoints[100]: " << this->_hitPoints << std::endl;
+	std::cout << "energyPoints[50]: " << this->_energyPoints << std::endl;
+	std::cout << "attackDamage[30]: " << this->_attackDamage << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name), ScavTrap(), FragTrap() {
 	this->_name = name;
 	ClapTrap::_name = name + "_clap_name";
-	this->_hitPoints = ClapTrap::_hitPoints; // 100
-	this->_energyPoints = ClapTrap::_energyPoints; // 50
-	this->_attackDamage = ClapTrap::_attackDamage; // 30
+	this->_hitPoints = FragTrap::_hitPointsConst; // 100
+	this->_energyPoints = ScavTrap::_energyPointsConst; // 50
+	this->_attackDamage = FragTrap::_attackDamageConst;// 30
 	std::cout << "DiamondTrap " << this->_name << " is born! 🐣" << std::endl;
-	std::cout << "hitPoints[100]: " << ScavTrap::_hitPoints << std::endl;
-	std::cout << "energyPoints[50]: " << ScavTrap::_energyPoints << std::endl;
-	std::cout << "attackDamage[30]: " << ScavTrap::_attackDamage << std::endl;
+	std::cout << "hitPoints[100]: " << this->_hitPoints << std::endl;
+	std::cout << "energyPoints[50]: " << this->_energyPoints << std::endl;
+	std::cout << "attackDamage[30]: " << this->_attackDamage << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &scavTrap): ClapTrap(scavTrap) {
@@ -52,7 +57,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs) {
 
 void	DiamondTrap::attack(std::string const &target) {
 	ScavTrap::attack(target);
-	this->_energyPoints -= 1;
 }
 
 void	DiamondTrap::whoAmI() {
@@ -63,6 +67,6 @@ void	DiamondTrap::whoAmI() {
 		std::cout << "DiamondTrap " << this->_name << " can't do action, it's dead! 💀" << std::endl;
 		return;
 	}
-	std::cout << "DiamondTrap name: " << this->_name << std::endl;
-	std::cout << "ClapTrap name: " << ClapTrap::_name << std::endl;
+	std::cout << "I am " << this->_name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
+	this->_energyPoints -= 1;
 }

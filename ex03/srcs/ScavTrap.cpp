@@ -13,16 +13,16 @@
 #include "ScavTrap.class.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap() {
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_hitPoints = _hitPointsConst;
+	this->_energyPoints = _energyPointsConst;
+	this->_attackDamage = _attackDamageConst;
 	std::cout << "Default ScavTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_hitPoints = _hitPointsConst;
+	this->_energyPoints = _energyPointsConst;
+	this->_attackDamage = _attackDamageConst;
 	std::cout << "ScavTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 

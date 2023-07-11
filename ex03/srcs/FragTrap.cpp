@@ -13,16 +13,16 @@
 #include "FragTrap.class.hpp"
 
 FragTrap::FragTrap(): ClapTrap() {
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = _hitPointsConst;
+	this->_energyPoints = _energyPointsConst;
+	this->_attackDamage = _attackDamageConst;
 	std::cout << "Default FragTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name) {
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = _hitPointsConst;
+	this->_energyPoints = _energyPointsConst;
+	this->_attackDamage = _attackDamageConst;
 	std::cout << "FragTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include "ClapTrap.class.hpp"
 #include "ScavTrap.class.hpp"
 
 int main(void) {

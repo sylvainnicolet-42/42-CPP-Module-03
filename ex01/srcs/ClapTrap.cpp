@@ -12,8 +12,8 @@
 
 #include "ClapTrap.class.hpp"
 
-ClapTrap::ClapTrap(): _name("Default ClapTrap"),_hitPoints(10),_energyPoints(10),_attackDamage(0) {
-	std::cout << this->_name << " is born! 🐣" << std::endl;
+ClapTrap::ClapTrap(): _name("Pikachu"),_hitPoints(10),_energyPoints(10),_attackDamage(0) {
+	std::cout << "Default ClapTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
@@ -62,6 +62,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 		return;
 	}
 	std::cout << "ClapTrap " << this->_name << " is repaired by " << amount << " points! ❤️" << std::endl;
+	this->_hitPoints += (int)amount;
 	this->_energyPoints--;
 }
 

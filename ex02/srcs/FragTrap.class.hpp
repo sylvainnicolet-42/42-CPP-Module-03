@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap {
 
 		FragTrap(std::string name);
 
-		void	highFivesGuys(void);
+		void	highFivesGuys();
 	private:
 };
 

@@ -16,7 +16,7 @@
 #include <iostream>
 #include "ClapTrap.class.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	public:
 		ScavTrap(); // Default constructor
 		ScavTrap(const ScavTrap &scavTrap); // Copy constructor

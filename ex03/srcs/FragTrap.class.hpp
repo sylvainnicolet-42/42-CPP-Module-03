@@ -16,7 +16,7 @@
 #include <iostream>
 #include "ClapTrap.class.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 	public:
 		FragTrap(); // Default constructor
 		FragTrap(const FragTrap &fragTrap); // Copy constructor
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap {
 
 		FragTrap(std::string name);
 
-		void	highFivesGuys(void);
+		void	highFivesGuys();
 	private:
 };
 

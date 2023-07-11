@@ -12,12 +12,11 @@
 
 #include "ScavTrap.class.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap()  {
-	this->_name = "Default ScavTrap";
+ScavTrap::ScavTrap(): ClapTrap() {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout << this->_name << " is born! 🐣" << std::endl;
+	std::cout << "Default ScavTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
@@ -27,10 +26,9 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 	std::cout << "ScavTrap " << this->_name << " is born! 🐣" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &scavTrap) {
-	(void)scavTrap;
-//	std::cout << "ScavTrap " << scavTrap._name << " is copied! 🐑" << std::endl;
-//	*this = scavTrap;
+ScavTrap::ScavTrap(const ScavTrap &scavTrap): ClapTrap(scavTrap) {
+	std::cout << "ScavTrap " << scavTrap._name << " is copied! 🐑" << std::endl;
+	*this = scavTrap;
 }
 
 ScavTrap::~ScavTrap() {

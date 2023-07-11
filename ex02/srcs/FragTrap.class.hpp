@@ -19,6 +19,8 @@
 class FragTrap : public ClapTrap {
 	public:
 		FragTrap(); // Default constructor
+		FragTrap(const FragTrap &fragTrap); // Copy constructor
+		FragTrap &operator=(const FragTrap &rhs); // Copy assignment operator
 		~FragTrap(); // Destructor
 
 		FragTrap(std::string name);

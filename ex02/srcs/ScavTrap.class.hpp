@@ -19,13 +19,14 @@
 class ScavTrap : public ClapTrap {
 	public:
 		ScavTrap(); // Default constructor
+		ScavTrap(const ScavTrap &scavTrap); // Copy constructor
+		ScavTrap &operator=(const ScavTrap &rhs); // Copy assignment operator
 		~ScavTrap(); // Destructor
 
 		ScavTrap(std::string name);
 
-		void attack(const std::string &target);
-		void guardGate();
-	private:
+		void	attack(const std::string &target);
+		void	guardGate();
 };
 
 #endif
